@@ -56,9 +56,13 @@ class SequenceService
         return sprintf('%0' . $length . 'd', $serial);
     }
 
-    public function getNextSerialWithPrefix(string $type, string $prefix): string
+    public function getNextSerialWithPrefix(string $type, string $prefix, ?int $pad = null): string
     {
-        $serial = $this->getNextSerial($type, $prefix);
+        if ($pad !== null) {
+            $serial = $this->getNextSerialAndPadZero($type, $prefix, $pad);
+        } else {
+            $serial = $this->getNextSerial($type, $prefix);
+        }
 
         return $prefix . $serial;
     }
