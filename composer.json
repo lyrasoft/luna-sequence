@@ -1,0 +1,26 @@
+{
+    "name": "lyrasoft/sequence",
+    "description": "LYRASOFT sequence package.",
+    "type": "windwalker-package",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Lyrasoft\\Sequence\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Simon Asika",
+            "email": "asika32764@gmail.com"
+        }
+    ],
+    "minimum-stability": "beta",
+    "require": {},
+    "extra": {
+        "windwalker": {
+            "packages": [
+                "Lyrasoft\\Sequence\\SequencePackage"
+            ]
+        }
+    }
+}
