@@ -33,6 +33,7 @@ You must manually add `SequencePackage::class` to `etc/di.php`
 ```php
 $sequenceServcie = $app->service(\Lyrasoft\Sequence\Service\SequenceService::class);
 
-$serial = $sequenceServcie->getNextSerial('order', 'FN-');
-$serial = $sequenceServcie->getNextSerialAndPadZero('order', 'FN-', 7);
+$serial = $sequenceServcie->getNextSerial('order', 'FN-'); // 15
+$serial = $sequenceServcie->getNextSerialAndPadZero('order', 'FN-', 7); // 0000015
+$serial = $sequenceServcie->getNextSerialWithPrefix('order', 'FN-', 7); // FN-0000015
 ```
